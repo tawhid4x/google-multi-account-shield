@@ -1,0 +1,169 @@
+/* Injected Account Menu Styles */
+
+#gmas-vault-header {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    #gmas-vault-header {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+.gmas-badge {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1a73e8;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gmas-badge { color: #8ab4f8; }
+}
+
+#gmas-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    font-size: 13px;
+    background: #f1f3f4;
+    color: #202124;
+    outline: none;
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    #gmas-search-input {
+        background: #202124;
+        border: 1px solid #5f6368;
+        color: #e8eaed;
+    }
+}
+
+#gmas-account-list {
+    overflow-y: auto;
+    max-height: 360px;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+/* Thin Scrollbar */
+#gmas-account-list::-webkit-scrollbar {
+    width: 6px;
+}
+#gmas-account-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+#gmas-account-list::-webkit-scrollbar-thumb {
+    background: #bdc1c6;
+    border-radius: 4px;
+}
+
+.gmas-account-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.gmas-account-row:hover {
+    background: rgba(0,0,0,0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+    .gmas-account-row:hover {
+        background: rgba(255,255,255,0.04);
+    }
+}
+
+.gmas-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.gmas-initials {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background: #1a73e8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.gmas-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.gmas-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gmas-email {
+    font-size: 12px;
+    color: #5f6368;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gmas-name { color: #e8eaed; }
+    .gmas-email { color: #9aa0a6; }
+}
+
+.gmas-status-pill {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #e6f4ea;
+    color: #137333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gmas-status-pill {
+        background: rgba(129, 201, 149, 0.15);
+        color: #81c995;
+    }
+}
+
+.gmas-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-top-color: #1a73e8;
+    border-radius: 50%;
+    animation: gmas-spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes gmas-spin {
+    to { transform: rotate(360deg); }
+}

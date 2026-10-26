@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault Manager - Google Account Shield</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../../assets/icons/icon48.png" alt="Logo">
+            <h2>Account Shield</h2>
+        </div>
+        <nav>
+            <a href="#" class="active" id="nav-vault">🗄️ Vault Dashboard</a>
+            <a href="#" id="nav-backup">💾 Backup & Restore</a>
+            <a href="#" id="nav-settings">⚙️ Advanced Settings</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Vault Manager</h1>
+            <div class="header-actions">
+                <input type="text" id="search-accounts" placeholder="Search accounts...">
+                <button id="btn-export">Export JSON</button>
+            </div>
+        </header>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3>Total Accounts</h3>
+                <p id="total-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Ready to Switch</h3>
+                <p id="ready-count">0</p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="accounts-table">
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Status</th>
+                        <th>Last Active</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="accounts-body">
+                    <!-- Dynamic Rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="options.js"></script>
+</body>
+</html>

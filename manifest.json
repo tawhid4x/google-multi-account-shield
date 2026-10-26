@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Google Multi-Account Shield & Unlimited Account Vault",
+  "short_name": "Google Account Shield",
+  "version": "1.0.0",
+  "description": "Automatically hides the 'Sign out of all accounts' button and lets you seamlessly scroll & switch 100-200+ Google/Gmail accounts directly inside Google's native account menu.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://accounts.google.com/*",
+    "*://mail.google.com/*",
+    "*://*.youtube.com/*",
+    "*://drive.google.com/*",
+    "*://docs.google.com/*",
+    "*://myaccount.google.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*", "*://accounts.google.com/*", "*://mail.google.com/*", "*://*.youtube.com/*", "*://drive.google.com/*", "*://docs.google.com/*", "*://myaccount.google.com/*"],
+      "css": ["src/content/signout-shield.css", "src/content/account-menu-injector.css"],
+      "js": ["src/content/signout-shield.js", "src/content/account-menu-injector.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_page": "src/options/options.html",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

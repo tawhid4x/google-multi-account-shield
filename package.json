@@ -1,0 +1,13 @@
+{
+  "name": "google-multi-account-shield",
+  "version": "1.0.0",
+  "description": "Google Multi-Account Shield & Unlimited Account Vault",
+  "scripts": {
+    "generate-icons": "node scripts/generate-icons.js",
+    "validate": "node scripts/validate-extension.js",
+    "build-zip": "node scripts/build-zip.js",
+    "test": "node tests/extension.test.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
