@@ -1,0 +1,17 @@
+/* Layer 1: Instant CSS Attribute Suppression at document_start */
+html[data-gmas-hide-signout="true"] a[href*="accounts.google.com/Logout"],
+html[data-gmas-hide-signout="true"] a[href*="/Logout?"],
+html[data-gmas-hide-signout="true"] a[href*="accounts.google.com/SignOutOptions"] {
+    /* Note: Will be refined by JS to not hide the top-right profile trigger */
+    display: none !important;
+}
+
+[data-gmas-signout-hidden="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
